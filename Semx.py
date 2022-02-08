@@ -22,10 +22,10 @@ logging.basicConfig(
 Blaze = TelegramClient(None, Var.API_KEY, Var.API_HASH)
 Blaze.start(bot_token=Var.TOKEN)
 
-print("STARTING BANALL BOT SERVER....") 
+print("INICIANDO O SERVIDOR DE BANIR TODOS VIA BOT....") 
 
 """
-MOVING TO COMMANDS NOW
+MUDANDO PARA COMANDOS AGORA
 """
 
 GANDU = []
@@ -41,15 +41,15 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**I'm Active🔥\nStart Fucking Any Group** \n\n **__ᏢᎾᏁᎶ🏓__ !!** `{ms}` ms")
+        await event.edit(f"**Eu estou ativo vosso admin 🧐♦️\nPosso começar a banir qualquer grupo =)** \n\n **__ᏢᎾᏁᎶ🧐♦️__ !!** `{ms}` ms")
 
 """
  RESTART COMMANDS 
 """
-@Blaze.on(events.NewMessage(pattern="^/restart"))
+@Blaze.on(events.NewMessage(pattern="^/reiniciar"))
 async def restart(e):
     if e.sender_id in GANDU:
-        text = "Ma Chud Gai Vro🤣...!!!"
+        text = "Tururu. . .. Reiniciando🤣!!!"
         await e.reply(text, parse_mode=None, link_preview=None )
         try:
             await Blaze.disconnect()
@@ -62,11 +62,11 @@ async def restart(e):
  BANALL COMMAND
 """
  
-@Blaze.on(events.NewMessage(pattern="^/banall"))
+@Blaze.on(events.NewMessage(pattern="^/ban"))
 async def testing(event):
   if event.sender_id in GANDU:
    if not event.is_group:
-        Reply = f"Noob !! Use This Cmd in Group."
+        Reply = f"Ridículo (a)! Use este comando no grupo."
         await event.reply(Reply, parse_mode=None, link_preview=None )
    else:
        await event.delete()
@@ -75,9 +75,9 @@ async def testing(event):
        admin = Raichu.admin_rights
        creator = Raichu.creator
        if not admin and not creator:
-           await event.reply("I Don't have sufficient Rights !!")
+           await event.reply("Não tenho direitos suficientes!")
            return
-       await event.reply("**Black Magin Begins...**")
+       await event.reply("**A Magia do Ban, Ban, Ban está para Começar...**")
        everyone = await event.client.get_participants(event.chat_id)
        for user in everyone:
            if user.id == RaichUB.id:
@@ -92,6 +92,6 @@ async def testing(event):
 """
   LEAVE COMMAND 
 """
-print("Leave Command Soon Currently Am Busy") 
-print("STARTED SUCCESSFULLY... JOIN @RaichuOfficial") 
+print("Sair do comando em breve Atualmente estou ocupado") 
+print("INICIADO COM SUCESSO... PRONTO PARA USO") 
 Blaze.run_until_disconnected()
