@@ -41,7 +41,7 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**Eu estou ativo vosso admin 🧐♦️\nPosso começar a banir qualquer grupo =)** \n\n **__ᏢᎾᏁᎶ🧐♦️__ !!** `{ms}` ms")
+        await event.edit(f"**Eu estou ativo, vosso admin 🧐♦️\nEstou pronto, pra banir e fazer limpeza do seu vosso grupo =)** \n\n **__ᏢᎾᏁᎶ PING PING PÁ PUM 🧐♦️__ !!** `{ms}` ms")
 
 """
  RESTART COMMANDS 
